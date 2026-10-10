@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:8081/api",
+    baseURL: "https://home-service-backend-production-2766.up.railway.app/api",
     headers: {
         "Content-Type": "application/json"
     }
@@ -15,7 +15,6 @@ api.interceptors.request.use(
         const url = config.url || "";
         const method = (config.method || "get").toLowerCase();
 
-        // Public endpoints should not receive an old JWT.
         const isLoginOrAuth =
             url.startsWith("/auth/") ||
             url.startsWith("auth/");
@@ -33,7 +32,6 @@ api.interceptors.request.use(
             return config;
         }
 
-        // Attach JWT only to requests that may need authentication.
         if (token) {
             config.headers = config.headers || {};
             config.headers.Authorization = `Bearer ${token}`;
