@@ -1,0 +1,101 @@
+
+/* Compact signup form - keep existing left-side design */
+
+.signup-page .login-form-section {
+  padding: 20px 5% !important;
+}
+
+.signup-page .login-card {
+  max-width: 500px !important;
+  padding: 26px 30px !important;
+  border-radius: 22px;
+}
+
+.signup-page .login-heading {
+  margin-bottom: 20px !important;
+}
+
+.signup-page .login-heading h2 {
+  font-size: 30px !important;
+  margin-bottom: 8px !important;
+}
+
+.signup-page .login-heading h3 {
+  font-size: 23px !important;
+  margin-bottom: 6px !important;
+}
+
+.signup-page .login-heading p {
+  font-size: 14px !important;
+}
+
+.signup-page form {
+  gap: 12px !important;
+}
+
+.signup-page .form-group {
+  gap: 6px !important;
+}
+
+.signup-page .form-group label {
+  font-size: 13px !important;
+}
+
+.signup-page .form-group input,
+.signup-page .form-group select {
+  height: 43px !important;
+  min-height: 43px !important;
+  padding: 0 13px !important;
+  font-size: 14px !important;
+  border-radius: 8px !important;
+}
+
+.signup-page .login-submit {
+  min-height: 46px !important;
+  height: 46px !important;
+  margin-top: 2px !important;
+  font-size: 15px !important;
+  border-radius: 8px !important;
+}
+
+.signup-page .login-divider {
+  margin: 16px 0 !important;
+}
+
+.signup-page .login-signup {
+  font-size: 13px !important;
+}
+
+.signup-page .login-security-note {
+  margin-top: 14px !important;
+  font-size: 12px !important;
+}
+
+/* Keep provider service dropdown compact */
+.signup-page .form-group select {
+  cursor: pointer;
+}
+
+/* Fit the complete signup form on a desktop screen */
+@media (min-width: 801px) {
+  .signup-page .login-form-section {
+    align-items: center;
+  }
+
+  .signup-page .login-card {
+    max-height: calc(100vh - 30px);
+    overflow-y: auto;
+  }
+}
+
+/* Mobile adjustment */
+@media (max-width: 800px) {
+  .signup-page .login-form-section {
+    padding: 12px 18px 25px !important;
+  }
+
+  .signup-page .login-card {
+    max-width: 500px !important;
+    padding: 24px 22px !important;
+  }
+}
